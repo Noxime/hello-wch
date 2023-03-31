@@ -38,6 +38,7 @@ name = "hello-wch"
 version = "0.1.0"
 dependencies = [
  "panic-halt",
+ "riscv",
  "riscv-rt",
 ]
 

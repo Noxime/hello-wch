@@ -6,6 +6,7 @@ edition = "2021"
 [dependencies]
 panic-halt = "0.2.0"
 riscv-rt = "0.11.0"
+riscv = "0.10"
 
 [patch.crates-io]
 riscv-rt = { git = "https://github.com/9names/riscv-rt", branch = "rv32e" }

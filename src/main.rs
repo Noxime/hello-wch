@@ -16,9 +16,14 @@ fn main() -> ! {
         // Set pin 1 to output
         GPIOC_CFGLR.write_volatile(0b0001_0000);
 
-        // Set pin 1 to high
-        GPIOC_OUTDR.write_volatile(0b1_0);
-    }
+        loop {
+            // Set pin 1 to high
+            GPIOC_OUTDR.write_volatile(0b1_0);
+            riscv::asm::delay(1_000_000);
 
-    loop {}
+            // Set pin 1 to low
+            GPIOC_OUTDR.write_volatile(0b0_0);
+            riscv::asm::delay(1_000_000);
+        }
+    }
 }
