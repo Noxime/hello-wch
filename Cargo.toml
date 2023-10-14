@@ -7,15 +7,9 @@ edition = "2021"
 panic-halt = "0.2.0"
 riscv-rt = "0.11.0"
 riscv = "0.10"
-ch32v0 = "0.1"
-ch32v00x-hal = { path = "../ch32v00x-hal", features = ["ch32v003"] }
-embedded-hal = "1.0.0-alpha.10"
-rand = { version = "0.8", default-features = false, features = ["small_rng"] }
-
-charlieplex = { path = "C:/Users/Aarop/repos/charlieplex" }
 
 [patch.crates-io]
 riscv-rt = { git = "https://github.com/9names/riscv-rt", branch = "rv32e" }
 
 [profile.dev]
-opt-level = 3
+opt-level = "s"
